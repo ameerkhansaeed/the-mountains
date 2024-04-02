@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+/* font-family: "Cinzel", serif; */
+
+@import url("https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel:wght@400..900&display=swap");
+/* font-family: "Cantarell", sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 200vh;
+  width: 100%;
+  font-family: "Cantarell", sans-serif;
+  position: relative;
+  color: #1b1b1b;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+
+header {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.542);
+  background-color: rgba(255, 255, 255, 0.301);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  grid-column: 1/13;
+  z-index: 2;
+}
+
+nav {
+  width: min(960px, 480px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo {
+  width: 2.8rem;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Cinzel", serif;
+  font-weight: 800;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background-image: url(./assets/main_image.jpg);
+  background-size: cover;
+}
+
+.heroImage {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  overflow: hidden;
+}
+
+.headlines {
+  grid-column-start: 3;
+  grid-row-start: 4;
+  animation: fade-in 2s 1;
+}
+
+#heroText {
+  font-size: 3rem;
+}
+
+#heroSubtext {
+  line-height: 1;
+}
+
+.transitionImg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  grid-column: 1/13;
+}
+
+section {
+  position: relative;
+}
+
+#description {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 20%
+    ),
+    url("mountain.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.descriptionText {
+  position: absolute;
+  display: inline-block;
+  bottom: 7rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  width: 85%;
+  background-color: rgba(255, 255, 255, 0.301);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  color: white;
+}
+
+#everest {
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 20%
+    ),
+    url("./assets/everest.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+#everest h2,
+#everest p {
+  color: #1b1b1b;
+}
+
+#fuji {
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 20%
+    ),
+    url("./assets/fuji.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#matterhorn {
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 20%
+    ),
+    url("./assets/matterhorn.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#matterhorn h2,
+#matterhorn p {
+  color: #1b1b1b;
+}
+
+#conclustion {
+  padding: 2rem;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
